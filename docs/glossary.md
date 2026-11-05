@@ -87,6 +87,10 @@ Not using dedicated change addresses, or re-using existing ones, would enable a
 passive observer to infer a significant amount of information about your
 transaction sizes and where you are sending transactions to.
 
+#### Child Pays For Parent (CPFP)
+
+A way to speed up an unconfirmed transaction that pays a low fee. A new ("child") transaction spends one of its outputs and pays a higher fee. Since [dcrd v1.6.0](https://github.com/decred/dcrd/releases/tag/release-v1.6.0), the transactions selected for blocks are ranked by the total fees of a transaction and its unconfirmed ancestors, so the child's fee also raises the priority of the unconfirmed "parent" transaction.
+
 #### Coin Type
 
 A unique number assigned to a cryptocurrency, which is used by [HD
